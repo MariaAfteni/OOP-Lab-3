@@ -8,13 +8,13 @@ public class System {
     public static void main(String[] args) {
 
         // Random rand = new Random();
-        // out.print("\n-------------------------------------------------");
-        // Assignment a1 = new Assignment();
-        // a1.due_assignment();
-        // a1.submit_assignment();
+        out.print("\n-------------------------------------------------");
+        Assignment a1 = new Assignment();
+        a1.due_assignment();
+        a1.submit_assignment();
 
-        // Grade g1 = new Grade();
-        // g1.gradded_assignment();
+        Grade g1 = new Grade();
+        g1.gradded_assignment();
 
     }
 
@@ -177,30 +177,29 @@ class Assignment extends Course {
     int submithour;
     // Random rand = new Random();
 
-    // void due_assignment() {
-    // duehour = random.nextInt(24);
-    // out.print("\nAssignment due hour " + duehour);
-    // }
+    void due_assignment() {
+        duehour = random.nextInt(24);
+        out.print("\nAssignment due hour " + duehour);
+    }
 
-    // void submit_assignment() {
-    // submithour = random.nextInt(24);
-    // out.print("\nTAssignment submitted at " + submithour);
-    // }
+    void submit_assignment() {
+        submithour = random.nextInt(24);
+        out.print("\nTAssignment submitted at " + submithour);
+    }
 
 }
 
 class Grade extends Assignment {
     int grade;
-    // Random rand = new Random();
     int fgrade;
 
     void gradded_assignment() {
-        grade = ThreadLocalRandom.current().nextInt(11);
-        if (submithour > duehour) {
-            fgrade = grade - 1;
-        } else {
-            fgrade = grade;
-        }
+        // grade = ThreadLocalRandom.current().nextInt(11);
+        // if (submithour > duehour) {
+        // fgrade = grade - 1;
+        // } else {
+        // fgrade = grade;
+        // }
         out.print("\nAssignment was graded. Grade - " + fgrade);
     }
 }
